@@ -1,0 +1,107 @@
+$topnav-background-color: #d52b1e;
+$topnav-link-color: #fff;
+.sidebar {
+	position: absolute;
+	border-radius: 0;
+	z-index: 1000;
+	top: 56px;
+	left: 235px;
+	width: 235px;
+	margin-left: -235px;
+	margin-bottom: 48px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	background-color: $topnav-background-color;
+	padding-bottom: 40px;
+	white-space: nowrap;
+	-webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    .list-group {
+    	a.list-group-item {
+    		background: $topnav-background-color;
+    		border: 0;
+    		border-radius: 0;
+    		color: $topnav-link-color;
+    		text-decoration: none;
+    		.fa {
+    			margin-right: 10px;
+    		}
+    	}
+    	a:hover {
+    		background: darken($topnav-background-color, 5%);
+    		color: #fff;
+    	}
+    	.header-fields {
+    		padding-top: 10px;
+    		> .list-group-item:first-child {
+    			border-top: 1px solid rgba(255,255,255,0.2);
+    		}
+    	}
+    }
+}
+.nested-menu {
+    .list-group-item {
+        cursor: pointer;
+    }
+    .nested {
+        list-style-type: none;
+    }
+    ul.submenu {
+        display: none;
+        height: 0;
+    }
+    & .expand {
+        ul.submenu {
+            display: block;
+            list-style-type: none;
+            height: auto;
+            li {
+                a {
+                    color: #fff;
+                    padding: 10px;
+                    display: block;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 992px) {
+    .sidebar {
+        top: 54px;
+        left: 0px;
+    }
+}
+@media (min-width: 992px) {
+    .header-fields {
+        display: none;
+    }
+}
+
+.toggle-button {
+	position: fixed;
+	width: 236px;
+	cursor: pointer;
+	padding: 12px;
+	bottom: 0;
+	color: $topnav-link-color;
+	background: $topnav-background-color;
+	i {
+		font-size: 23px;
+	}
+	&:hover {
+		background: darken($topnav-background-color, 5%);
+		color: #fff;
+	}
+	border-top: 1px solid #999;
+	// transition: all 2s ease-in-out;
+}
+
+.collapsed {
+	width: 60px;
+	span {
+		display: none;
+	}
+}

@@ -1,0 +1,39 @@
+<nav class="sidebar" [ngClass]="{collapsed: collapsed}">
+	<div class="list-group">
+		<a routerLink="/dashboard" class="list-group-item">
+			<i class="fa fa-fw fa-dashboard"></i>&nbsp;
+			<span> {{'Dashboard'}} </span>
+		</a>
+		<a routerLink="/charts" class="list-group-item">
+			<i class="fa fa-fw fa-bar-chart-o"></i>&nbsp;
+			<span> {{'Wykresy'}} </span>
+		</a>
+		<a routerLink="/components" routerLinkActive="router-link-active" class="list-group-item">
+            <i class="fa fa-th-list"></i>&nbsp;
+            <span>{{ 'Component' }}</span>
+        </a>
+        <div class="header-fields">
+        	<a class="list-group-item">
+        		<span><i class="fa fa-arrows-h">&nbsp; RTL</i></span>
+        	</a>
+        	<div class="nested-menu">
+        		<a class="list-group-item">
+                    <span><i class="fa fa-language"></i>&nbsp; {{ 'Language' }} <span class="caret"></span></span>
+                </a>
+                <li class="nested">
+                	<ul class="submenu">
+                		<li>
+                			<a href="javascript:void(0)" >
+                                {{ 'English' }}
+                            </a>
+                		</li>
+                	</ul>
+                </li>
+        	</div>
+        </div>
+	</div>
+    <div class="toggle-button" (click)="toggleCollapsed()" [ngClass]="{ collapsed: collapsed }">
+        <i class="fa fa-fw fa-angle-double-{{collapsed?'right':'left'}}"></i>&nbsp;<span>{{ 'Collapse Sidebar' }}</span>
+    </div>
+	
+</nav>

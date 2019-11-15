@@ -28,7 +28,8 @@
               "projects/portal/src/assets"
             ],
             "styles": [
-              "projects/portal/src/styles.scss"
+              "node_modules/font-awesome/css/font-awesome.css",
+              "projects/portal/src/styles/app.scss"
             ],
             "scripts": []
           },
