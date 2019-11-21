@@ -6,9 +6,10 @@ import { LayoutRoutingModule } from './layout-routing.module';
 import { LayoutComponent } from './layout.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
 
 @NgModule({
-  declarations: [LayoutComponent, HeaderComponent, SidebarComponent],
+  declarations: [LayoutComponent, HeaderComponent, SidebarComponent, LoadingSpinnerComponent],
   imports: [
     CommonModule,
     LayoutRoutingModule,

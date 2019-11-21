@@ -1,6 +1,7 @@
 <app-header></app-header>
 <app-sidebar (collapsedEvent)="receiveCollapsed($event)" ></app-sidebar>
 <section class="main-container" [ngClass]="{collapsed: collapsedSideBar}">
+	<app-loading-spinner></app-loading-spinner>
 	<router-outlet></router-outlet>
 </section>
 
