@@ -16,8 +16,8 @@ import { AppComponent } from './app.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(
-    	InMemoryDataService, { dataEncapsulation: true })
+    // HttpClientInMemoryWebApiModule.forRoot(
+    // 	InMemoryDataService, { dataEncapsulation: true })
   ],
   providers: [],
   bootstrap: [AppComponent]

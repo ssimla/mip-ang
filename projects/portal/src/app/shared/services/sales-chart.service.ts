@@ -10,12 +10,12 @@ import { Raport } from './raport';
 })
 export class SalesChartService {
 
-  private salesUrl = 'api/sales';
+  url = 'http://mip/admin/api.php/drawings/sales';
 
   constructor(private http: HttpClient) { }
 
   getSales(): Observable<Raport> {
-  	return this.http.get<Raport>(this.salesUrl)
+  	return this.http.get<Raport>(this.url)
   		.pipe(
   			tap(data => console.log(data))
 		)
