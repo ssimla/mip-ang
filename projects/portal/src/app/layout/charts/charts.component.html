@@ -1,12 +1,28 @@
 <div>
 	<div class="row">
 		<div class="col col-sm-6">
-			<div class="card mb-3" *ngIf="salesRaport " >
-				<div  class="card-header">
-					{{chartTitle}}
+			
+			<div class="card mb-3" *ngIf="showSpinner" >
+				
+				<div  class="card-header" >
+					 {{'Sprzedaż kredytu konsumpcyjnego'}}
 				</div>
-				<div class="card-body">
+				<div class="card-body" >
 					<div class="d-block">
+						<app-loading-spinner ></app-loading-spinner>	
+					</div>
+				</div>
+				<div class="card-footer">
+					<button class="btn btn-info btn-sm">Aktualizuj</button>
+				</div>
+			</div>
+			<div class="card mb-3" *ngIf="chartTitle" >
+				<div  class="card-header" >
+					 {{chartTitle}}
+				</div>
+				<div class="card-body" *ngIf="barChartData">
+					<div class="d-block">
+
 						<canvas baseChart
 							[datasets]="barChartData"
 							[labels]="barChartLabels"

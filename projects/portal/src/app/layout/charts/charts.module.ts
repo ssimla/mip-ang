@@ -4,6 +4,7 @@ import { ChartsModule as Ng2Charts } from 'ng2-charts';
 
 import { ChartsComponent } from './charts.component';
 import { ChartsRoutingModule } from './charts-routing.module';
+import { LoadingSpinnerModule } from '../../shared';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { ChartsRoutingModule } from './charts-routing.module';
   imports: [
     CommonModule,
     Ng2Charts,
-    ChartsRoutingModule
+    ChartsRoutingModule,
+    LoadingSpinnerModule
   ]
 })
 export class ChartsModule { }
