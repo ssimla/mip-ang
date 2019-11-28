@@ -34,7 +34,7 @@ export class ChartsComponent implements OnInit {
   		.subscribe((r: Raport) => {
   			
         this.showSpinner = false;
-  		this.salesRaport = r.data;
+  		  this.salesRaport = r.data;
         this.chartTitle = this.salesRaport.tytul;
 
         let barChartSalesSerie = this.salesRaport.tresc.map(function(x) {
