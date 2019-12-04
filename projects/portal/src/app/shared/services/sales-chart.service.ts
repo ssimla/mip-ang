@@ -10,7 +10,8 @@ import { Raport } from './raport';
 })
 export class SalesChartService {
 
-  url = 'http://mip/admin/api.php/drawings/sales';
+  url = 'http://mip/testy/admin/api.php/collector/portal/chart';
+  // url = 'api/chart';
 
   constructor(private http: HttpClient) { }
 

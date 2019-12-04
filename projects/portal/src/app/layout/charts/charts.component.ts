@@ -31,21 +31,21 @@ export class ChartsComponent implements OnInit {
 
   getSalesBarChartData(): void {
   	this.salesChartService.getSales()
-  		.subscribe((r: Raport) => {
+  		.subscribe((r: any) => {
   			
         this.showSpinner = false;
-  		  this.salesRaport = r.data;
+  		  this.salesRaport = r.data.sales;
         this.chartTitle = this.salesRaport.tytul;
 
         let barChartSalesSerie = this.salesRaport.tresc.map(function(x) {
-          return x.wartoscY;
+          return x.wartoscY.sales;
         });
         this.barChartLabels = this.salesRaport.tresc.map(function(x) {
           return x.wartoscX;
         });
         this.barChartData = [
           {
-            data: barChartSalesSerie, label: this.salesRaport.tytul
+            data: barChartSalesSerie, label: "Sprzeda\u017C"
           }
         ];
         //this.chartJsonData = JSON.stringify(this.salesRaport);
