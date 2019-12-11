@@ -10,6 +10,7 @@ export class DashboardComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  	console.log('Wgrałem komponent dashboards');
   }
   
   onEverySecond() { console.log('sekunda'); }
