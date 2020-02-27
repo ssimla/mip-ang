@@ -1,0 +1,8 @@
+<p>raports works!</p>
+
+<div *ngIf="isOpen"  class="open-close-container" @myInsertRemoveTrigger >
+	<p>Pudełko nadjeżdża </p>
+</div>
+<div  (click)="toggle()"  class="open-close-container" [@openClose]="isOpen ? 'open' : 'close'" >
+	<p>Pudełko jest teraz {{ isOpen ? 'otwarte' : 'zamknięte' }} </p>
+</div>

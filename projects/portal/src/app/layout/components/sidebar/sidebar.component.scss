@@ -34,6 +34,10 @@ $topnav-link-color: #fff;
     		background: darken($topnav-background-color, 5%);
     		color: #fff;
     	}
+        a.router-link-active {
+            background: darken($topnav-background-color, 5%);
+            color: #fff;
+        }
     	.header-fields {
     		padding-top: 10px;
     		> .list-group-item:first-child {

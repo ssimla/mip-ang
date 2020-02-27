@@ -1,0 +1,14 @@
+$topnav-background-color: #d52b1e;
+:host {
+	.card {
+		.nowrap {
+			overflow: auto;
+			white-space: nowrap;
+		}
+		.card-body:hover {
+			background: darken($topnav-background-color, 2%);
+		}
+	}
+
+
+} 

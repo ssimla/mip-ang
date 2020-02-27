@@ -13,16 +13,16 @@ export class StatComponent implements OnInit {
   bgClass: string;
   count: number;
   label: string;
-  everySecond: EventEmitter<any> = new EventEmitter<string>();
-  fiveSecs: EventEmitter<any> = new EventEmitter<string>();
+  // everySecond: EventEmitter<any> = new EventEmitter<string>();
+  // fiveSecs: EventEmitter<any> = new EventEmitter<string>();
 
   constructor() { 
-      setInterval(
-        () => this.everySecond.emit('ewencik jednosekundowy'),
-        1000);
-      setInterval(
-        () => this.fiveSecs.emit('ewencik 5 sekundowy'),
-        5000);
+      // setInterval(
+      //   () => this.everySecond.emit('ewencik jednosekundowy'),
+      //   1000);
+      // setInterval(
+      //   () => this.fiveSecs.emit('ewencik 5 sekundowy'),
+      //   5000);
    }
 
   ngOnInit() {

@@ -3,15 +3,21 @@
     <div class="row">
         <div class="col"></div>
         <div class="col-9">
-            <div class="row">
+            <div class="row" *ngIf="raportyKategorie">
                 <div class="col-lg-4 col-md-6">
-                    <app-stat [bgClass]="'bpred'" [icon]="'fa-briefcase'" [count]="13" [label]="'New Tickets!'" (every1)="onEverySecond()" (every5)="onEveryFiveSeconds()"></app-stat>
+                    <a [routerLink]="['/raporty',{'kat':[1,2]}]" (click)="linkClicked()">
+                        <app-stat [bgClass]="'bpred'" [icon]="'fa-briefcase'" [count]="countRaportsWithCategory([1])" [label]="'Raporty biznesowe'" ></app-stat>
+                    </a>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <app-stat [bgClass]="'bpred'" [icon]="'fa-money'" [count]="13" [label]="'New Tickets!'" (every1)="onEverySecond()" (every5)="onEveryFiveSeconds()"></app-stat>
+                    <a [routerLink]="['/raporty',{'kat':[2]}]">
+                        <app-stat [bgClass]="'bpred'" [icon]="'fa-money'" [count]="countRaportsWithCategory([2])" [label]="'Raporty finansowe'" ></app-stat>
+                    </a>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <app-stat [bgClass]="'bpred'" [icon]="'fa-cog'" [count]="13" [label]="'New Tickets!'" (every1)="onEverySecond()" (every5)="onEveryFiveSeconds()"></app-stat>
+                    <a [routerLink]="['/raporty',{'kat':[99]}]">
+                        <app-stat [bgClass]="'bpred'" [icon]="'fa-cog'" [count]="countRaportsWithCategory([99])" [label]="'Raporty operacyjne'" ></app-stat>
+                    </a>
                 </div>
             </div>
         </div>

@@ -1,16 +1,16 @@
 <nav class="sidebar" [ngClass]="{collapsed: collapsed}">
 	<div class="list-group">
-		<a routerLink="/dashboard" class="list-group-item">
+		<a routerLink="/dashboard" routerLinkActive="router-link-active" class="list-group-item">
 			<i class="fa fa-fw fa-dashboard"></i>&nbsp;
 			<span> {{'Dashboard'}} </span>
 		</a>
-		<a routerLink="/charts" class="list-group-item">
+		<a routerLink="/charts" routerLinkActive="router-link-active" class="list-group-item">
 			<i class="fa fa-fw fa-bar-chart-o"></i>&nbsp;
 			<span> {{'Wykresy'}} </span>
 		</a>
-		<a routerLink="/components" routerLinkActive="router-link-active" class="list-group-item">
+		<a routerLink="/raporty" routerLinkActive="router-link-active" class="list-group-item">
             <i class="fa fa-th-list"></i>&nbsp;
-            <span>{{ 'Component' }}</span>
+            <span>{{ 'Raporty' }}</span>
         </a>
         <div class="header-fields">
         	<a class="list-group-item">
@@ -33,7 +33,7 @@
         </div>
 	</div>
     <div class="toggle-button" (click)="toggleCollapsed()" [ngClass]="{ collapsed: collapsed }">
-        <i class="fa fa-fw fa-angle-double-{{collapsed?'right':'left'}}"></i>&nbsp;<span>{{ 'Collapse Sidebar' }}</span>
+        <i class="fa fa-fw fa-angle-double-{{collapsed?'right':'left'}}"></i>&nbsp;<span>{{ 'Schowaj pasek' }}</span>
     </div>
 	
 </nav>
