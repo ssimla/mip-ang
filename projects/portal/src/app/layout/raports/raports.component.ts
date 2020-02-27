@@ -31,13 +31,13 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
   					height: '100px'
   				})),
   			transition('false <=> true', 
-  				animate('1s')),
+  				animate('0.5s')),
 			]
 	),
 	trigger('myInsertRemoveTrigger', [
 			transition(':enter', [
 				style({opacity: 0}),
-				animate('2s')
+				animate('6s')
 				]),
 			transition(':leave', [
 				animate('2s', style({opacity: 0}))

@@ -1,8 +1,16 @@
-<p>raports works!</p>
+<div>
+	<p>raports works!</p>
 
-<div *ngIf="isOpen"  class="open-close-container" @myInsertRemoveTrigger >
+	<div *ngIf="isOpen"  class="open-close-container">
+		<p>Pudełko nadjeżdża </p>
+	</div>
+	<div  (click)="toggle()"  class="open-close-container"  >
+		<p>Pudełko jest teraz {{ isOpen ? 'otwarte' : 'zamknięte' }} </p>
+	</div>
+</div>
+<!-- <div *ngIf="isOpen"  class="open-close-container" @myInsertRemoveTrigger >
 	<p>Pudełko nadjeżdża </p>
-</div>
-<div  (click)="toggle()"  class="open-close-container" [@openClose]="isOpen ? 'open' : 'close'" >
+</div> -->
+<!-- <div  (click)="toggle()"  class="open-close-container" [@openClose1]="isOpen" >
 	<p>Pudełko jest teraz {{ isOpen ? 'otwarte' : 'zamknięte' }} </p>
-</div>
+</div> -->

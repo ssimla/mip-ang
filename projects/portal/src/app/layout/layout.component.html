@@ -1,6 +1,8 @@
 <app-header></app-header>
 <app-sidebar (collapsedEvent)="receiveCollapsed($event)" ></app-sidebar>
 <section class="main-container" [ngClass]="{collapsed: collapsedSideBar}">
-	<router-outlet></router-outlet>
+	<div [@routeAnimations] = "prepareRoute(outlet)" [ngStyle]="{'min-height': '500px'}">
+		<router-outlet #outlet="outlet"></router-outlet>
+	</div>
 </section>
 
