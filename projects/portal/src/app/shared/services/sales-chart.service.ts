@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { tap } from 'rxjs/operators';
+import { tap, delay } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
 
 import { Raport } from './raport';
@@ -18,7 +18,8 @@ export class SalesChartService {
   getSales(): Observable<Raport> {
   	return this.http.get<Raport>(this.url)
   		.pipe(
-  			tap(data => console.log(data))
+  			tap(data => console.log(data)),
+        delay(3000)
 		)
   }
 }

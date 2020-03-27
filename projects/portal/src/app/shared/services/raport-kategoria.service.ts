@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { tap } from 'rxjs/operators';
+import { tap, delay } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
 
 import { RaportKategoria } from './raportkategoria';
@@ -18,7 +18,8 @@ export class RaportKategoriaService {
   getRaportCategories(): Observable<RaportKategoria[]> {
   	return this.http.get<RaportKategoria[]>(this.url)
   		.pipe(
-  			tap()
+  			tap(),
+  			delay(1000)
 		)
   }
 

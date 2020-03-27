@@ -16,7 +16,8 @@ const routes: Routes = [
 			data: {animation: 'DashboardPage'}
 		},
 		{
-			path: 'charts', loadChildren: () => import('./charts/charts.module').then(m => m.ChartsModule)
+			path: 'charts', loadChildren: () => import('./charts/charts.module').then(m => m.ChartsModule),
+			data: {animation: 'ChartsPage'}			
 		},
 		{
 			path: 'raporty',

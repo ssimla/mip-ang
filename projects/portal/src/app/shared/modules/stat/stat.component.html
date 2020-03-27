@@ -5,7 +5,14 @@
                 <i class="fa {{icon}} fa-5x"></i>
             </div>
             <div class="col col-xs-9 text-right">
-                <h1>{{count}}</h1>
+                <div [ngStyle]="{'height':'4em'}">
+                    <h1 *ngIf="count">
+                        {{count}}
+                    </h1>
+                    <h1 *ngIf="!count" >
+                        <app-loading-spinner></app-loading-spinner>
+                    </h1>
+                </div>
                 <h5 class="nowrap">{{label}}</h5>
             </div>
         </div>
